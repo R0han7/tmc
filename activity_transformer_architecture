@@ -1,0 +1,23 @@
+digraph ActivityTransformer {
+	rankdir=TB
+	dpi=600
+	Input [label="Input
+x (batch_size, seq_len, num_features)
+subject_ids (batch_size,)
+mask (batch_size, seq_len)" fillcolor=lightgreen shape=box style=filled]
+	Embedding [label="Input Embedding Layer
+Subject Embedding + Concat + Projection" fillcolor=lightblue shape=box style=filled]
+	SeqEmb [label="Sequence Embedding
+Add CLS Token + Positional Encoding" fillcolor=lightblue shape=box style=filled]
+	Transformer [label="Transformer Encoder
+num_layers layers with masking" fillcolor=lightblue shape=box style=filled]
+	OutputLayer [label="Output Layer
+Select CLS Output + Classifier" fillcolor=lightblue shape=box style=filled]
+	Output [label="Output
+(batch_size, num_classes)" fillcolor=lightgreen shape=box style=filled]
+	Input -> Embedding
+	Embedding -> SeqEmb
+	SeqEmb -> Transformer
+	Transformer -> OutputLayer
+	OutputLayer -> Output
+}
