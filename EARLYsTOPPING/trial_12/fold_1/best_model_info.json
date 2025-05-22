@@ -1,0 +1,30 @@
+{
+    "trial": 12,
+    "fold": 1,
+    "epoch": 13,
+    "val_acc": 0.7916666666666666,
+    "val_f1": 0.7843794209603033,
+    "per_class_f1": {
+        "1 (FACING camera) Sit and stand": 0.6666666666666666,
+        "10 Slow walk (SHAKING hands/body, tiny step, head forward)": 0.7777777777777778,
+        "2 (FACING camera) both hands SHAKING (sitting position)": 0.9090909090909091,
+        "3 Stand up from chair - both hands with SHAKING": 0.7272727272727273,
+        "4 (Sideway) Sit & stand": 0.8571428571428571,
+        "5 (Sideway) both hands SHAKING (sitting)": 0.75,
+        "6 (Sideway) STAND up with - both hands SHAKING": 0.5714285714285714,
+        "7 Cool down - sitting/relax": 0.8,
+        "8 Walk (LEFT --> Right --> Left)": 0.8888888888888888,
+        "9 Walk & STOP/frozen, full body shaking, rotate then return back": 0.8235294117647058
+    },
+    "hyperparameters": {
+        "d_model": 256,
+        "num_heads": 8,
+        "num_layers": 2,
+        "dropout": 0.2628944841706673,
+        "embedding_dim": 64,
+        "learning_rate": 0.0006161467531707069,
+        "batch_size": 8
+    },
+    "num_parameters": 834698,
+    "model_architecture": "ActivityTransformer(\n  (subject_embedding): Embedding(10, 64)\n  (input_proj): Linear(in_features=103, out_features=256, bias=True)\n  (transformer_encoder): TransformerEncoder(\n    (layers): ModuleList(\n      (0-1): 2 x TransformerEncoderLayer(\n        (self_attn): MultiheadAttention(\n          (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)\n        )\n        (linear1): Linear(in_features=256, out_features=256, bias=True)\n        (dropout): Dropout(p=0.2628944841706673, inplace=False)\n        (linear2): Linear(in_features=256, out_features=256, bias=True)\n        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)\n        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)\n        (dropout1): Dropout(p=0.2628944841706673, inplace=False)\n        (dropout2): Dropout(p=0.2628944841706673, inplace=False)\n      )\n    )\n  )\n  (classifier): Linear(in_features=256, out_features=10, bias=True)\n)"
+}

@@ -1,0 +1,30 @@
+{
+    "trial": 8,
+    "fold": 1,
+    "epoch": 1,
+    "val_acc": 0.07272727272727272,
+    "val_f1": 0.03283926218708827,
+    "per_class_f1": {
+        "1 (FACING camera) Sit and stand": 0.125,
+        "10 Slow walk (SHAKING hands/body, tiny step, head forward)": 0.0,
+        "2 (FACING camera) both hands SHAKING (sitting position)": 0.0,
+        "3 Stand up from chair - both hands with SHAKING": 0.0,
+        "4 (Sideway) Sit & stand": 0.26666666666666666,
+        "5 (Sideway) both hands SHAKING (sitting)": 0.0,
+        "6 (Sideway) STAND up with - both hands SHAKING": 0.0,
+        "7 Cool down - sitting/relax": 0.0,
+        "8 Walk (LEFT --> Right --> Left)": 0.08695652173913043,
+        "9 Walk & STOP/frozen, full body shaking, rotate then return back": 0.0
+    },
+    "hyperparameters": {
+        "d_model": 128,
+        "num_heads": 2,
+        "num_layers": 2,
+        "dropout": 0.15894138225944282,
+        "embedding_dim": 64,
+        "learning_rate": 0.0005152768425675734,
+        "batch_size": 32
+    },
+    "num_parameters": 286858,
+    "model_architecture": "ActivityTransformer(\n  (subject_embedding): Embedding(10, 64)\n  (input_proj): Linear(in_features=103, out_features=128, bias=True)\n  (transformer_encoder): TransformerEncoder(\n    (layers): ModuleList(\n      (0-1): 2 x TransformerEncoderLayer(\n        (self_attn): MultiheadAttention(\n          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)\n        )\n        (linear1): Linear(in_features=128, out_features=256, bias=True)\n        (dropout): Dropout(p=0.15894138225944282, inplace=False)\n        (linear2): Linear(in_features=256, out_features=128, bias=True)\n        (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)\n        (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)\n        (dropout1): Dropout(p=0.15894138225944282, inplace=False)\n        (dropout2): Dropout(p=0.15894138225944282, inplace=False)\n      )\n    )\n  )\n  (classifier): Linear(in_features=128, out_features=10, bias=True)\n)"
+}

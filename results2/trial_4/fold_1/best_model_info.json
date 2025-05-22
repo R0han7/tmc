@@ -1,0 +1,30 @@
+{
+    "trial": 4,
+    "fold": 1,
+    "epoch": 23,
+    "val_acc": 0.3275862068965517,
+    "val_f1": 0.28431979334616253,
+    "per_class_f1": {
+        "1 (FACING camera) Sit and stand": 0.0,
+        "10 Slow walk (SHAKING hands/body, tiny step, head forward)": 0.3076923076923077,
+        "2 (FACING camera) both hands SHAKING (sitting position)": 0.3076923076923077,
+        "3 Stand up from chair - both hands with SHAKING": 0.0,
+        "4 (Sideway) Sit & stand": 0.47058823529411764,
+        "5 (Sideway) both hands SHAKING (sitting)": 0.0,
+        "6 (Sideway) STAND up with - both hands SHAKING": 0.3333333333333333,
+        "7 Cool down - sitting/relax": 0.5,
+        "8 Walk (LEFT --> Right --> Left)": 0.2222222222222222,
+        "9 Walk & STOP/frozen, full body shaking, rotate then return back": 0.48
+    },
+    "hyperparameters": {
+        "d_model": 128,
+        "num_heads": 2,
+        "num_layers": 1,
+        "dropout": 0.396599112278606,
+        "embedding_dim": 32,
+        "learning_rate": 0.00017521274441304594,
+        "batch_size": 16
+    },
+    "num_parameters": 149962,
+    "model_architecture": "ActivityTransformer(\n  (subject_embedding): Embedding(10, 32)\n  (input_proj): Linear(in_features=71, out_features=128, bias=True)\n  (transformer_encoder): TransformerEncoder(\n    (layers): ModuleList(\n      (0): TransformerEncoderLayer(\n        (self_attn): MultiheadAttention(\n          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)\n        )\n        (linear1): Linear(in_features=128, out_features=256, bias=True)\n        (dropout): Dropout(p=0.396599112278606, inplace=False)\n        (linear2): Linear(in_features=256, out_features=128, bias=True)\n        (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)\n        (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)\n        (dropout1): Dropout(p=0.396599112278606, inplace=False)\n        (dropout2): Dropout(p=0.396599112278606, inplace=False)\n      )\n    )\n  )\n  (classifier): Linear(in_features=128, out_features=10, bias=True)\n)"
+}

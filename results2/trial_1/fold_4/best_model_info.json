@@ -1,0 +1,29 @@
+{
+    "trial": 1,
+    "fold": 4,
+    "epoch": 30,
+    "val_acc": 0.7209302325581395,
+    "val_f1": 0.732565238379192,
+    "per_class_f1": {
+        "10 Slow walk (SHAKING hands/body, tiny step, head forward)": 0.6666666666666666,
+        "2 (FACING camera) both hands SHAKING (sitting position)": 0.8,
+        "3 Stand up from chair - both hands with SHAKING": 0.7692307692307693,
+        "4 (Sideway) Sit & stand": 1.0,
+        "5 (Sideway) both hands SHAKING (sitting)": 0.8888888888888888,
+        "6 (Sideway) STAND up with - both hands SHAKING": 0.5714285714285714,
+        "7 Cool down - sitting/relax": 0.3333333333333333,
+        "8 Walk (LEFT --> Right --> Left)": 0.75,
+        "9 Walk & STOP/frozen, full body shaking, rotate then return back": 0.6666666666666666
+    },
+    "hyperparameters": {
+        "d_model": 64,
+        "num_heads": 4,
+        "num_layers": 3,
+        "dropout": 0.35727490120480654,
+        "embedding_dim": 32,
+        "learning_rate": 0.0009635143921330499,
+        "batch_size": 16
+    },
+    "num_parameters": 158858,
+    "model_architecture": "ActivityTransformer(\n  (subject_embedding): Embedding(10, 32)\n  (input_proj): Linear(in_features=71, out_features=64, bias=True)\n  (transformer_encoder): TransformerEncoder(\n    (layers): ModuleList(\n      (0-2): 3 x TransformerEncoderLayer(\n        (self_attn): MultiheadAttention(\n          (out_proj): NonDynamicallyQuantizableLinear(in_features=64, out_features=64, bias=True)\n        )\n        (linear1): Linear(in_features=64, out_features=256, bias=True)\n        (dropout): Dropout(p=0.35727490120480654, inplace=False)\n        (linear2): Linear(in_features=256, out_features=64, bias=True)\n        (norm1): LayerNorm((64,), eps=1e-05, elementwise_affine=True)\n        (norm2): LayerNorm((64,), eps=1e-05, elementwise_affine=True)\n        (dropout1): Dropout(p=0.35727490120480654, inplace=False)\n        (dropout2): Dropout(p=0.35727490120480654, inplace=False)\n      )\n    )\n  )\n  (classifier): Linear(in_features=64, out_features=10, bias=True)\n)"
+}

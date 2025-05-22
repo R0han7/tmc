@@ -1,0 +1,15 @@
+                                                                  precision    recall  f1-score   support
+
+      10 Slow walk (SHAKING hands/body, tiny step, head forward)       1.00      0.17      0.29         6
+         2 (FACING camera) both hands SHAKING (sitting position)       0.00      0.00      0.00         5
+                 3 Stand up from chair - both hands with SHAKING       0.00      0.00      0.00         6
+                                         4 (Sideway) Sit & stand       0.30      0.75      0.43         4
+                        5 (Sideway) both hands SHAKING (sitting)       0.00      0.00      0.00         5
+                  6 (Sideway) STAND up with - both hands SHAKING       0.12      0.60      0.19         5
+                                     7 Cool down - sitting/relax       0.00      0.00      0.00         2
+                                8 Walk (LEFT --> Right --> Left)       0.00      0.00      0.00         3
+9 Walk & STOP/frozen, full body shaking, rotate then return back       0.00      0.00      0.00         7
+
+                                                        accuracy                           0.16        43
+                                                       macro avg       0.16      0.17      0.10        43
+                                                    weighted avg       0.18      0.16      0.10        43

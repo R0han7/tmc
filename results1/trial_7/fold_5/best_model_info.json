@@ -1,0 +1,18 @@
+{
+    "trial": 7,
+    "fold": 5,
+    "epoch": 1,
+    "val_acc": 0.11363636363636363,
+    "val_f1": 0.13041443850267379,
+    "hyperparameters": {
+        "d_model": 256,
+        "num_heads": 4,
+        "num_layers": 3,
+        "dropout": 0.498861411258975,
+        "embedding_dim": 16,
+        "learning_rate": 0.00014026532708817297,
+        "batch_size": 32
+    },
+    "num_parameters": 1217706,
+    "model_architecture": "ActivityTransformer(\n  (subject_embedding): Embedding(10, 16)\n  (input_proj): Linear(in_features=55, out_features=256, bias=True)\n  (transformer_encoder): TransformerEncoder(\n    (layers): ModuleList(\n      (0-2): 3 x TransformerEncoderLayer(\n        (self_attn): MultiheadAttention(\n          (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)\n        )\n        (linear1): Linear(in_features=256, out_features=256, bias=True)\n        (dropout): Dropout(p=0.498861411258975, inplace=False)\n        (linear2): Linear(in_features=256, out_features=256, bias=True)\n        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)\n        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)\n        (dropout1): Dropout(p=0.498861411258975, inplace=False)\n        (dropout2): Dropout(p=0.498861411258975, inplace=False)\n      )\n    )\n  )\n  (classifier): Linear(in_features=256, out_features=10, bias=True)\n)"
+}

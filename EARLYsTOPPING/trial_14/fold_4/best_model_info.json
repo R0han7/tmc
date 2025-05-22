@@ -1,0 +1,30 @@
+{
+    "trial": 14,
+    "fold": 4,
+    "epoch": 1,
+    "val_acc": 0.35,
+    "val_f1": 0.31197586726998494,
+    "per_class_f1": {
+        "1 (FACING camera) Sit and stand": 0.0,
+        "10 Slow walk (SHAKING hands/body, tiny step, head forward)": 0.2222222222222222,
+        "2 (FACING camera) both hands SHAKING (sitting position)": 0.46153846153846156,
+        "3 Stand up from chair - both hands with SHAKING": 0.0,
+        "4 (Sideway) Sit & stand": 0.0,
+        "5 (Sideway) both hands SHAKING (sitting)": 0.23529411764705882,
+        "6 (Sideway) STAND up with - both hands SHAKING": 0.4,
+        "7 Cool down - sitting/relax": 0.0,
+        "8 Walk (LEFT --> Right --> Left)": 0.5,
+        "9 Walk & STOP/frozen, full body shaking, rotate then return back": 0.6
+    },
+    "hyperparameters": {
+        "d_model": 256,
+        "num_heads": 8,
+        "num_layers": 2,
+        "dropout": 0.3034409970509306,
+        "embedding_dim": 64,
+        "learning_rate": 0.0008605818716584302,
+        "batch_size": 8
+    },
+    "num_parameters": 834698,
+    "model_architecture": "ActivityTransformer(\n  (subject_embedding): Embedding(10, 64)\n  (input_proj): Linear(in_features=103, out_features=256, bias=True)\n  (transformer_encoder): TransformerEncoder(\n    (layers): ModuleList(\n      (0-1): 2 x TransformerEncoderLayer(\n        (self_attn): MultiheadAttention(\n          (out_proj): NonDynamicallyQuantizableLinear(in_features=256, out_features=256, bias=True)\n        )\n        (linear1): Linear(in_features=256, out_features=256, bias=True)\n        (dropout): Dropout(p=0.3034409970509306, inplace=False)\n        (linear2): Linear(in_features=256, out_features=256, bias=True)\n        (norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)\n        (norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)\n        (dropout1): Dropout(p=0.3034409970509306, inplace=False)\n        (dropout2): Dropout(p=0.3034409970509306, inplace=False)\n      )\n    )\n  )\n  (classifier): Linear(in_features=256, out_features=10, bias=True)\n)"
+}
