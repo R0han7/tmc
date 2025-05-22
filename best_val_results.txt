@@ -1,0 +1,5 @@
+===============================
+Best validation subject pair: ('U7', 'U3')
+Best F1-score: 0.4119
+Best Accuracy: 0.4286
+===============================
