@@ -1,0 +1,14 @@
+Final Cross-Validation Results with Best Hyperparameters:
+Average Validation Accuracy: 0.8122 ± 0.0555
+Average Validation F1-Score: 0.8111 ± 0.0601
+
+Best Hyperparameters:
+  d_model: 64
+  num_heads: 8
+  num_layers: 3
+  dropout: 0.17730016855623962
+  embedding_dim: 64
+  learning_rate: 0.0023231332078763565
+  batch_size: 32
+
+Best Trial Mean F1-Score: 0.9559

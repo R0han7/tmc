@@ -1,5 +1,5 @@
-Best Validation Accuracy: 0.7500
-Best Validation F1: 0.2500
+Best Validation Accuracy: 0.0000
+Best Validation F1: 0.0000
 Train Subjects: U2, U21, U22, U3, U4, U5, U6, U7
 Test Subjects: U1
-Best Parameters: {'d_model': 64, 'num_heads': 8, 'num_layers': 2, 'dropout': 0.3216926836281627, 'embedding_dim': 16, 'lr': 0.0009854175090221818, 'batch_size': 16}
+Best Parameters: {'d_model': 64, 'num_heads': 4, 'num_layers': 3, 'dropout': 0.27979613133421966, 'embedding_dim': 16, 'lr': 0.0006316930519809863, 'batch_size': 16}
